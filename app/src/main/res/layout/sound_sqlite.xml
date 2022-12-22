@@ -57,16 +57,49 @@
     <!--s2301d04-->
 
     <EditText
-        android:id="@+id/et_saveName"
+        android:id="@+id/et_saveNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:hint="Write Sound Number" />
 
+    <EditText
+        android:id="@+id/et_saveName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Write Sound Name" />
+
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_Insert"
         android:text="save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_Check"
+        android:text="check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:orientation="horizontal"
+        android:layout_weight="8">
+
+        <EditText
+            android:id="@+id/edtNumResult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/edtNameResult"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
 </LinearLayout>
