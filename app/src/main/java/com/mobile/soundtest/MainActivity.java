@@ -2,13 +2,17 @@ package com.mobile.soundtest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    Intent intent;
+    Button button;
     ImageButton imageButton;
 
     @Override
@@ -17,15 +21,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("Home");
 
-        imageButton = findViewById(R.id.btn_1);
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.sound1);
+        button = findViewById(R.id.btn_move);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+
+        imageButton = findViewById(R.id.btn_1);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.start();
+                intent = new Intent(MainActivity.this, sound_sqlite.class);
+                startActivity(intent);
             }
         });
+
+
 
     }
 }
